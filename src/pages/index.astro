@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Contacto from "../components/Contacto.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout>
+  <div
+    class="flex flex-col sm:flex-row w-full h-screen justify-center items-center"
+  >
+    <div class="w-full h-auto flex flex-col justify-center items-center">
+      <h1 class="font-lexend text-6xl text-primary mb-5">Miguel Olarte</h1>
+      <p class="font-lexend font-light text-primary text-3xl mb-5">
+        Desarrollador Web FullStack
+      </p>
+    </div>
+    <div class="w-full flex justify-center items-center">
+      <img
+        src="/src/assets/miguel.jpeg"
+        alt="Miguel Olarte"
+        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"
+      />
+    </div>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center align-center sm:w-full"
+    id="sobre-mi"
+  >
+    <h2
+      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+    >
+      Sobre mi
+    </h2>
+    <div class="sm:w-1/2 mx-auto">
+      <p class="sm:text-xl font-normal font-lexend m-5 text-justify">
+        Mi nombre es Miguel Olarte, soy estudiante de Ingeniería de Sistemas,
+        desarrollador FullStack autodidacta, con 2 años de experiencia en el
+        mundo de la programación, actualmente enfocado en Java con SpringBoot
+        para el desarrollo backend y Angular para el desarrollo frontend. Me
+        gusta aprender cosas nuevas a diario, para mí un día en el que no
+        aprenda algo es un día perdido.
+      </p>
+    </div>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center align-center sm:w-full"
+    id="proyectos"
+  >
+    <h2
+      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+    >
+      Proyectos
+    </h2>
+    <div class="sm:w-1/2 mx-auto">
+      <ProjectCard
+        title="Barberstown"
+        data="Proyecto web, que permite gestionar barberos, clientes y citas en una barbería. Realizado con SpringBoot y Postgresql para la parte del backend y Angular para el frontend"
+        foto="barberstown.png"
+        github="https://github.com/olarte91/barberstown"
+        tech1="spring.png"
+        tech2="angular.png"
+      />
+    </div>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center align-center sm:w-full"
+    id="proyectos"
+  >
+    <h2
+      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+    >
+      Contacto
+    </h2>
+    <div class="sm:w-1/2 mx-auto">
+      <Contacto/>
+    </div>
+  </div>
+</MainLayout>

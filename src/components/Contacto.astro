@@ -1,20 +1,56 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <div class="w-full m-5 sm:m-10 font-lexend flex justify-around">
-    <a href="https://www.linkedin.com/in/miguel-olarte-dev/" class="w-full m-5"
-        ><img src="/linkedin.png" alt="Linkedin" class="sm:w-1/4" /></a
-    >
-    <a href="https://github.com/olarte91" class="w-full m-5"
-        ><img src="/github.png" alt="GitHub" class="w-full sm:w-1/4" /></a
-    >
-    <a href="https://www.tiktok.com/@tktkr91" class="w-full m-5"
-        ><img src="/tiktok.png" alt="tiktok" class="w-full sm:w-1/4" /></a
-    >
-    <a
-        href="https://www.facebook.com/profile.php?id=61572989186098"
-        class="w-full m-5"
-        ><img src="/facebook.png" alt="Facebook" class="w-full sm:w-1/4" /></a
-    >
+    <div class="sm:w-1/4">
+        <a
+            href="https://www.linkedin.com/in/miguel-olarte-dev/"
+            class="w-full m-5"
+        >
+            <Image
+                src="/linkedin.png"
+                alt={"linkedin"}
+                width={500}
+                height={500}
+                class="w-full p-5 sm:w-xl sm:m-5 sm:p-10"
+            />
+        </a>
+    </div>
+
+    <div class="sm:w-1/4">
+        <a href="https://github.com/olarte91" class="w-full m-5"
+            ><Image
+                src="/github.png"
+                alt={"github"}
+                width={500}
+                height={500}
+                class="w-full p-5 sm:w-xl sm:m-5 sm:p-10"
+            /></a
+        >
+    </div>
+    <div class="sm:w-1/4">
+        <a href="https://www.tiktok.com/@tktkr91" class="w-full m-5"
+            ><Image
+                src="/tiktok.png"
+                alt={"tiktok"}
+                width={500}
+                height={500}
+                class="w-full p-5 sm:w-xl sm:m-5 sm:p-10"
+            /></a
+        >
+    </div>
+    <div class="sm:w-1/4 ">
+        <a
+            href="https://www.facebook.com/profile.php?id=61572989186098"
+            class="w-full m-5"
+            ><Image
+                src="/facebook.png"
+                alt={"facebook"}
+                width={500}
+                height={500}
+                class="w-full p-5 sm:w-xl sm:m-5 sm:p-10"
+            /></a
+        >
+    </div>
 </div>

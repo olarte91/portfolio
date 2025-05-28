@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Contacto from "../components/Contacto.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
@@ -15,19 +16,21 @@ import MainLayout from "../layouts/MainLayout.astro";
       </p>
     </div>
     <div class="w-full flex justify-center items-center">
-      <img
+      <Image
         src="/miguel.jpeg"
         alt="Miguel Olarte"
-        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"
-      />
+        width={500}
+        height={500}
+        loading="lazy"
+        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"/>
     </div>
   </div>
   <div
-    class="w-full flex flex-col justify-center align-center sm:w-full"
+    class="w-full h-screen flex flex-col justify-center align-center sm:w-full"
     id="sobre-mi"
   >
     <h2
-      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
     >
       Sobre mi
     </h2>
@@ -43,36 +46,37 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </div>
   <div
-    class="w-full flex flex-col justify-center align-center sm:w-full"
+    class="w-full h- h-screen flex flex-col justify-center align-center sm:w-full"
     id="proyectos"
   >
     <h2
-      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
     >
       Proyectos
     </h2>
-    <div class="sm:w-1/2 mx-auto">
+    <div class="sm:w-1/2 sm:mx-auto m-5 ">
       <ProjectCard
         title="Barberstown"
         data="Proyecto web, que permite gestionar barberos, clientes y citas en una barbería. Realizado con SpringBoot y Postgresql para la parte del backend y Angular para el frontend"
-        foto="barberstown.png"
+        foto="/barberstown.png"
         github="https://github.com/olarte91/barberstown"
-        tech1="spring.png"
-        tech2="angular.png"
+        tech1="/spring.png"
+        tech2="/angular.png"
+        tech3="/tailwind.svg"
       />
     </div>
   </div>
   <div
-    class="w-full flex flex-col justify-center align-center sm:w-full"
-    id="proyectos"
+    class="w-full h-screen flex flex-col justify-evenly align-center sm:w-full"
+    id="contacto"
   >
     <h2
-      class="font-bold font-lexend mb-5 text-4xl w-full text-primary text-center"
+      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
     >
       Contacto
     </h2>
-    <div class="sm:w-1/2 mx-auto">
-      <Contacto/>
+    <div class="sm:w-1/2 mx-auto flex justify-center items-center">
+      <Contacto />
     </div>
   </div>
 </MainLayout>

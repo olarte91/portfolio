@@ -25,48 +25,80 @@ import { Image } from "astro:assets";
     <main class="h-1/2">
         <p class="m-5 font-lexend">{data}</p>
         <div class="w-full h-auto flex flex-col justify-between items-center">
-            <div class="w-1/2 flex justify-center items-center">
-                <a href={github} target="_blank" class="flex justify-center items-center">
-                    <Image
-                        src="/github.png"
-                        alt="github"
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                        class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
-                    />
-                </a>
+            <div class="w-full flex justify-center items-center">
+                <div class="w-full h-full flex flex-col items-center">
+                    <a
+                        href={github}
+                        target="_blank"
+                        class="flex justify-center items-center"
+                    >
+                        <Image
+                            src="/github.png"
+                            alt="github"
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
+                        />
+                    </a>
+                    <p class="text-3xl sm:text-xl">Backend</p>
+                </div>
+                <div class="w-full h-full flex flex-col items-center">
+                    <a
+                        href={github}
+                        target="_blank"
+                        class="flex justify-center items-center"
+                    >
+                        <Image
+                            src="/github.png"
+                            alt="github"
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
+                        />
+                    </a>
+                    <p class="text-3xl sm:text-xl">Frontend</p>
+                </div>
             </div>
             <div class="w-full h-xl flex flex-row">
                 <div class="w-1/2 m-5 flex justify-center items-center">
-                    <Image
-                        src={tech1}
-                        alt="SpringBoot"
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                        class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
-                    />
+                    <a
+                        href="https://spring.io/projects/spring-boot"
+                        target="_blank"
+                        ><Image
+                            src={tech1}
+                            alt="SpringBoot"
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
+                        /></a
+                    >
                 </div>
                 <div class="w-1/2 m-5 flex justify-center items-center">
-                    <Image
-                        src={tech2}
-                        alt="Angular"
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                        class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
-                    />
+                    <a href="https://angular.dev/" target="_blank"
+                        ><Image
+                            src={tech2}
+                            alt="Angular"
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
+                        /></a
+                    >
                 </div>
-                <div class="w-1/2 m-5 flex justify-center items-center">
-                    <Image
-                        src={tech3}
-                        alt="tailwind"
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                        class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
-                    />
+                <div class="w-1/2 m-5 p-5 flex justify-center items-center">
+                    <a href="https://tailwindcss.com/" target="_blank"
+                        ><Image
+                            src={tech3}
+                            alt="tailwind"
+                            width={500}
+                            height={500}
+                            loading="lazy"
+                            class="w-sm h-20 m-5 sm:m-0 object-contain opacity-100 sm:hover:opacity-50 sm:transition-opacity sm:duration-300 sm:ease-in-out"
+                        /></a
+                    >
                 </div>
             </div>
         </div>

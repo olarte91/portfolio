@@ -1,5 +1,5 @@
 ---
-const { foto, title, data, github, tech1, tech2, tech3 } = Astro.props;
+const { foto, title, data, github1, github2, tech1, tech2, tech3 } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -23,12 +23,12 @@ import { Image } from "astro:assets";
         </div>
     </header>
     <main class="h-1/2">
-        <p class="m-5 font-lexend">{data}</p>
+        <p class="m-3 font-lexend">{data}</p>
         <div class="w-full h-auto flex flex-col justify-between items-center">
             <div class="w-full flex justify-center items-center">
                 <div class="w-full h-full flex flex-col items-center">
                     <a
-                        href={github}
+                        href={github1}
                         target="_blank"
                         class="flex justify-center items-center"
                     >
@@ -45,7 +45,7 @@ import { Image } from "astro:assets";
                 </div>
                 <div class="w-full h-full flex flex-col items-center">
                     <a
-                        href={github}
+                        href={github2}
                         target="_blank"
                         class="flex justify-center items-center"
                     >

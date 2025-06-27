@@ -22,7 +22,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         width={500}
         height={500}
         loading="lazy"
-        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"/>
+        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"
+      />
     </div>
   </div>
   <div
@@ -54,12 +55,23 @@ import MainLayout from "../layouts/MainLayout.astro";
     >
       Proyectos
     </h2>
-    <div class="sm:w-1/2 sm:mx-auto m-5 ">
+    <div class="sm:w-1/2 sm:mx-auto m-5 flex">
       <ProjectCard
         title="Barberstown"
         data="Proyecto web, que permite gestionar barberos, clientes y citas en una barbería. Realizado con SpringBoot y Postgresql para la parte del backend y Angular para el frontend"
         foto="/barberstown.png"
-        github="https://github.com/olarte91/barberstown"
+        github1="https://github.com/olarte91/barberstown"
+        github2="https://github.com/olarte91/barberstown-front"
+        tech1="/spring.png"
+        tech2="/angular.png"
+        tech3="/tailwind.svg"
+      />
+      <ProjectCard
+        title="Parking-a-Lot"
+        data="Aplicación web para la gestión eficiente de parqueaderos, facilitando el control de entradas, salidas y generación de reportes. Desarrollada con SpringBoot (backend) y Angular (frontend)"
+        foto="/parkingalot.png"
+        github1="https://github.com/olarte91/parking-a-lot-backend"
+        github2="https://github.com/olarte91/parking-a-lot-backend"
         tech1="/spring.png"
         tech2="/angular.png"
         tech3="/tailwind.svg"
@@ -67,16 +79,35 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </div>
   <div
-    class="w-full h-screen flex flex-col justify-evenly align-center sm:w-full"
+    class="w-full sm:my-11 flex flex-col justify-evenly align-center sm:w-full sm:h-auto"
     id="contacto"
   >
     <h2
-      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
+      class="font-medium font-lexend text-4xl sm:text-6xl w-full my-24 text-primary text-center"
     >
       Contacto
     </h2>
-    <div class="sm:w-1/2 mx-auto flex justify-center items-center">
-      <Contacto />
+    <div class="sm:w-1/2 mx-auto flex justify-around items-center">
+      <Contacto
+        link="https://www.linkedin.com/in/miguel-olarte-dev/"
+        img="/linkedin.png"
+        altImg="LinkedIn - Miguel Olarte"
+      />
+      <Contacto
+        link="https://github.com/olarte91"
+        img="/github.png"
+        altImg="GitHub - Miguel Olarte"
+      />
+      <Contacto
+        link="https://www.tiktok.com/@tktkr91"
+        img="/tiktok.png"
+        altImg="TikTok - Miguel Olarte"
+      />
+      <Contacto
+        link="https://www.facebook.com/profile.php?id=61572989186098"
+        img="/facebook.png"
+        altImg="Facebook - Miguel Olarte"
+      />
     </div>
   </div>
 </MainLayout>

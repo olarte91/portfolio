@@ -7,11 +7,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <div
-    class="flex flex-col sm:flex-row w-full h-screen justify-center items-center"
+    class="flex flex-col sm:flex-row w-full h-auto my-12 justify-center items-center"
   >
     <div class="w-full h-auto flex flex-col justify-center items-center">
-      <h1 class="font-lexend text-6xl text-primary mb-5">Miguel Olarte</h1>
-      <p class="font-lexend font-light text-primary text-3xl mb-5">
+      <h1
+        class="font-lexend font-extrabold text-center text-7xl text-primary mb-5"
+      >
+        Miguel Olarte
+      </h1>
+      <p class="font-lexend text-center font-light text-primary text-3xl mb-5">
         Desarrollador Web FullStack
       </p>
     </div>
@@ -22,41 +26,76 @@ import MainLayout from "../layouts/MainLayout.astro";
         width={500}
         height={500}
         loading="lazy"
-        class="w-80 h-80 sm:w-96 sm:h-96 mb-5 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"
+        class="w-80 h-80 sm:w-96 sm:h-96 rounded-full object-cover sm:hover:scale-110 sm:hover:shadow-2xl sm:transition sm:transform duration-300"
       />
     </div>
   </div>
   <div
-    class="w-full h-screen flex flex-col justify-center align-center sm:w-full"
+    class="w-full h-auto sm:px-64 sm:my-36 flex mb-5 flex-col justify-center align-center"
     id="sobre-mi"
   >
-    <h2
-      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
-    >
+    <h2 class="font-extrabold font-lexend text-5xl text-primary text-center">
       Sobre mi
     </h2>
-    <div class="sm:w-1/2 mx-auto">
+    <div class="my-5">
       <p class="sm:text-xl font-normal font-lexend m-5 text-justify">
-        Mi nombre es Miguel Olarte, soy estudiante de Ingeniería de Sistemas,
-        desarrollador FullStack autodidacta, con 2 años de experiencia en el
-        mundo de la programación, actualmente enfocado en Java con SpringBoot
-        para el desarrollo backend y Angular para el desarrollo frontend. Me
-        gusta aprender cosas nuevas a diario, para mí un día en el que no
-        aprenda algo es un día perdido.
+        Soy estudiante de octavo semestre de Ingeniería de Sistemas, apasionado
+        por el desarrollo de software y la creación de soluciones prácticas
+        desde cero. Mi enfoque principal es el backend, donde tengo un dominio
+        intermedio de Java y Spring Boot, y experiencia en la construcción de
+        APIs REST, gestión de bases de datos con PostgreSQL y manejo de
+        relaciones ORM. También tengo conocimientos básicos en JavaScript,
+        TypeScript, PHP y Angular, y me interesa seguir aprendiendo para dominar
+        el desarrollo full stack. Actualmente desarrollo proyectos personales,
+        como una aplicación para la gestión de barberías y otra para la
+        administración de parqueaderos, lo que me ha permitido aplicar y
+        fortalecer mis habilidades técnicas y de resolución de problemas.
+        Además, cuento con 11 años de experiencia previa en el ámbito de la
+        publicidad, donde aprendí la importancia del trabajo en equipo y la
+        colaboración para sacar adelante proyectos complejos. Me motiva el
+        aprendizaje continuo y la posibilidad de crecer profesionalmente junto a
+        otros desarrolladores experimentados. Busco mi primera oportunidad
+        laboral en el sector del software, convencido de que cada día es una
+        nueva oportunidad para aprender: para mí, un día en el que no se aprende
+        algo es un día perdido.
       </p>
     </div>
   </div>
   <div
-    class="w-full h- h-screen flex flex-col justify-center align-center sm:w-full"
+    class="w-full h-auto flex flex-col justify-center items-center px-5 sm:w-full"
     id="proyectos"
   >
-    <h2
-      class="font-medium font-lexend mb-5 text-4xl sm:text-6xl w-full text-primary text-center"
-    >
+    <h2 class="font-extrabold font-lexend text-5xl text-primary text-center">
       Proyectos
     </h2>
-    <div class="sm:w-1/2 sm:mx-auto m-5 flex">
+    <div class="w-full h-auto m-5 flex flex-col">
       <ProjectCard
+        title="BarbersTown"
+        img="/barberstown.png"
+        altImg="Barberstown"
+        desc="Proyecto web para gestionar barberos, clientes y citas en una barbería, desarrollado con SpringBoot y PostgreSQL en el backend, y Angular en el frontend."
+        github1="https://github.com/olarte91/barberstown"
+        github2="https://github.com/olarte91/barberstown-front"
+        imgGit="github.png"
+        altImgGit="GitHub"
+        tech1="spring.png"
+        tech2="angular.png"
+        tech3="tailwind.svg"
+      />
+      <hr />
+      <ProjectCard
+        title="Parking-a-Lot"
+        img="/parkingalot.png"
+        altImg="Barberstown"
+        desc="Aplicación web para la gestión eficiente de parqueaderos, facilitando el control de entradas, salidas y generación de reportes. Desarrollada con SpringBoot (backend) y Angular (frontend)."
+        github1="https://github.com/olarte91/parking-a-lot-backend"
+        imgGit="github.png"
+        altImgGit="GitHub"
+        tech1="spring.png"
+        tech2="angular.png"
+        tech3="tailwind.svg"
+      />
+      <!-- <ProjectCard
         title="Barberstown"
         data="Proyecto web, que permite gestionar barberos, clientes y citas en una barbería. Realizado con SpringBoot y Postgresql para la parte del backend y Angular para el frontend"
         foto="/barberstown.png"
@@ -75,7 +114,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         tech1="/spring.png"
         tech2="/angular.png"
         tech3="/tailwind.svg"
-      />
+      /> -->
     </div>
   </div>
   <div
@@ -83,11 +122,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     id="contacto"
   >
     <h2
-      class="font-medium font-lexend text-4xl sm:text-6xl w-full my-24 text-primary text-center"
+      class="font-extrabold font-lexend text-5xl sm:text-6xl w-full my-12 sm:my-44 text-primary text-center"
     >
       Contacto
     </h2>
-    <div class="sm:w-1/2 mx-auto flex justify-around items-center">
+    <div class="w-full mb-5 flex justify-evenly items-center">
       <Contacto
         link="https://www.linkedin.com/in/miguel-olarte-dev/"
         img="/linkedin.png"

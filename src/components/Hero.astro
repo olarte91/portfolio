@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div class="relative overflow-hidden min-h-screen">
+    <!-- Fondo animado con gradiente -->
+    <div
+        class="absolute inset-0 bg-gradient-to-br from-mint-400/20 via-emerald-300/10 to-teal-400/20 bg-300% animate-gradient-slow"
+    >
+    </div>
+
+    <!-- Círculos decorativos flotantes -->
+    <div
+        class="absolute top-20 left-10 w-72 h-72 bg-mint-300/30 rounded-full blur-3xl animate-float"
+    >
+    </div>
+    <div
+        class="absolute bottom-20 right-10 w-96 h-96 bg-teal-300/20 rounded-full blur-3xl animate-float"
+        style="animation-delay: 2s;"
+    >
+    </div>
+
+    <div
+        class="relative flex flex-col sm:flex-row w-full min-h-screen justify-center items-center gap-12 px-5 py-20"
+    >
+        <!-- Contenido de texto -->
+        <div
+            class="w-full flex flex-col justify-center items-center z-10 space-y-6"
+        >
+            <h1
+                class="font-lexend font-extrabold text-6xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 mb-2 animate-fade-in text-center"
+            >
+                Miguel Olarte
+            </h1>
+
+            <p
+                class="font-lexend font-light text-2xl sm:text-3xl text-gray-700 animate-fade-in-delay text-center"
+            >
+                Desarrollador Jr Backend | Java
+            </p>
+
+            <!-- Botones CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-8 animate-slide-up">
+                <a
+                    href="#proyectos"
+                    class="px-8 py-4 bg-gradient-to-r from-mint-500 to-teal-500 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-xl hover:shadow-mint-500/50 transition-all duration-300 text-center"
+                >
+                    Ver Proyectos
+                </a>
+                <a
+                    href="#contacto"
+                    class="px-8 py-4 border-2 border-mint-500 text-mint-700 font-lexend font-semibold rounded-xl hover:bg-mint-500 hover:text-white transition-all duration-300 text-center"
+                >
+                    Contacto
+                </a>
+                <a
+                    href="/cv-miguel-olarte.pdf"
+                    download="CV-Miguel-Olarte-Backend-Developer.pdf"
+                    class="group px-8 py-4 bg-gradient-to-r from-mint-600 to-teal-600 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-mint-500/50 transition-all duration-300 text-center flex items-center gap-3"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-6 h-6 group-hover:animate-bounce"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        ></path>
+                    </svg>
+                    Descargar CV
+                </a>
+            </div>
+        </div>
+
+        <!-- Imagen de perfil -->
+        <div class="w-full flex justify-center items-center">
+            <div class="relative group">
+                <!-- Efecto de halo animado -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-mint-400 to-teal-500 rounded-full blur-xl opacity-40 group-hover:opacity-75 transition duration-500 animate-pulse"
+                >
+                </div>
+
+                <Image
+                    src="/miguel.jpeg"
+                    alt="Miguel Olarte - Desarrollador Backend Java"
+                    width={500}
+                    height={500}
+                    class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                />
+            </div>
+        </div>
+    </div>
+</div>

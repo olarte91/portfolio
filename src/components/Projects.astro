@@ -1,0 +1,44 @@
+---
+import EnhancedProjectCard from "./EnhancedProjectCard.astro"
+---
+
+<div
+    class="w-full h-auto py-20 px-5 bg-gradient-to-b from-white to-mint-50"
+    id="proyectos"
+>
+    <h2
+        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16"
+    >
+        Proyectos
+    </h2>
+
+    <div class="max-w-6xl mx-auto space-y-12">
+        <EnhancedProjectCard
+            title="BarbersTown"
+            img="/barberstown.png"
+            altImg="Barberstown"
+            desc="Proyecto web para barberías, útil para gestionar clientes y citas, desarrollado con SpringBoot y PostgreSQL en el backend, y Angular en el frontend."
+            github1="https://github.com/olarte91/barberstown"
+            github2="https://github.com/olarte91/barberstown-front"
+            imgGit="github.png"
+            altImgGit="GitHub"
+            tech1="spring.png"
+            tech2="angular.png"
+            tech3="tailwind.svg"
+        />
+
+        <EnhancedProjectCard
+            title="Parking-a-Lot"
+            img="parking-a-lot-angular.png"
+            altImg="Parking-a-Lot"
+            desc="Aplicación web para la gestión eficiente de parqueaderos, facilitando el control de entradas, salidas y generación de reportes. Desarrollada con SpringBoot Clean Architecture (backend) y Angular (frontend) apoyado de PrimeNg."
+            github1="https://github.com/olarte91/parking-a-lot-backend-clean-architecture"
+            github2="https://github.com/olarte91/parking-a-lot-front-angular"
+            imgGit="github.png"
+            altImgGit="GitHub"
+            tech1="spring.png"
+            tech2="angular.png"
+            tech3="primeng-logo.png"
+        />
+    </div>
+</div>

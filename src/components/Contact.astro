@@ -1,0 +1,44 @@
+---
+import EnhancedContact from "./EnhancedContact.astro";
+---
+
+<div
+    class="w-full py-20 sm:py-32 flex flex-col justify-center items-center bg-gradient-to-b from-mint-50 to-white"
+    id="contacto"
+>
+    <h2
+        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16"
+    >
+        Conectemos
+    </h2>
+
+    <p
+        class="font-lexend text-xl text-gray-600 text-center mb-12 max-w-2xl px-5"
+    >
+        ¿Tienes un proyecto en mente o quieres colaborar? ¡Me encantaría saber
+        de ti!
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 px-5">
+        <EnhancedContact
+            link="https://www.linkedin.com/in/miguel-olarte-dev/"
+            img="/linkedin.png"
+            altImg="LinkedIn - Miguel Olarte"
+        />
+        <EnhancedContact
+            link="https://github.com/olarte91"
+            img="/github.png"
+            altImg="GitHub - Miguel Olarte"
+        />
+        <EnhancedContact
+            link="https://www.tiktok.com/@tktkr91"
+            img="/tiktok.png"
+            altImg="TikTok - Miguel Olarte"
+        />
+        <EnhancedContact
+            link="https://www.facebook.com/profile.php?id=61572989186098"
+            img="/facebook.png"
+            altImg="Facebook - Miguel Olarte"
+        />
+    </div>
+</div>

@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+
+import miguel from "../assets/images/miguel.jpg"
 ---
 
 <div class="relative overflow-hidden min-h-screen">
@@ -87,7 +89,7 @@ import { Image } from "astro:assets";
                 </div>
 
                 <Image
-                    src="/miguel.jpg"
+                    src={miguel}
                     alt="Miguel Olarte - Desarrollador Backend Java"
                     width={500}
                     height={500}

@@ -1,44 +1,39 @@
 ---
 import EnhancedProjectCard from "./EnhancedProjectCard.astro";
+import { getCollection } from "astro:content";
+
+// Importa las capturas de pantalla
+import parkingImg from "../assets/images/parking.png";
+import barbersImg from "../assets/images/barbers.png";
+
+// Importa los iconos de tecnologías
+import springIcon from "../assets/images/spring.png";
+import angularIcon from "../assets/images/angular.png";
+import primengIcon from "../assets/images/primeng-logo.png";
+import tailwindIcon from "../assets/images/tailwind.svg";
+import githubIcon from "../assets/images/github.png";
+
+const projectsData = await getCollection('projects');
 ---
 
 <section
     class="w-full h-auto py-20 px-5 bg-gradient-to-b from-white to-mint-50"
     id="proyectos"
 >
-    <h2
-        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16"
-    >
-        Proyectos
-    </h2>
-
     <div class="max-w-6xl mx-auto space-y-12">
-        <EnhancedProjectCard
-            title="Parking-a-Lot"
-            img="parking.png"
-            altImg="Parking-a-Lot"
-            desc="Aplicación web para la gestión eficiente de parqueaderos, facilitando el control de entradas, salidas y generación de reportes. Desarrollada con SpringBoot Clean Architecture (backend) y Angular (frontend) apoyado de PrimeNg."
-            github1="https://github.com/olarte91/parking-a-lot-backend-clean-architecture"
-            github2="https://github.com/olarte91/parking-a-lot-front-angular"
-            imgGit="github.png"
-            altImgGit="GitHub"
-            tech1="spring.png"
-            tech2="angular.png"
-            tech3="primeng-logo.png"
-        />
-
-        <EnhancedProjectCard
-            title="BarbersTown"
-            img="/barbers.png"
-            altImg="Barberstown"
-            desc="Proyecto web para barberías, útil para gestionar clientes y citas, desarrollado con SpringBoot y PostgreSQL en el backend, y Angular en el frontend."
-            github1="https://github.com/olarte91/barberstown"
-            github2="https://github.com/olarte91/barberstown-front"
-            imgGit="github.png"
-            altImgGit="GitHub"
-            tech1="spring.png"
-            tech2="angular.png"
-            tech3="tailwind.svg"
-        />
+        {
+            projectsData.map((project) => (
+                <EnhancedProjectCard
+                    title={project.data.title}
+                    image={project.data.image}
+                    altImage={project.data.title}
+                    desc={project.data.desc}
+                    githubBackend={project.data.githubBackend}
+                    githubFrontend={project.data.githubFrontend}
+                    gitIcon={githubIcon}
+                    techStack={project.data.techStack}
+                />
+            ))
+        }
     </div>
 </section>

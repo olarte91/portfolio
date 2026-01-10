@@ -1,30 +1,27 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
 interface Props {
     title: string;
-    img: string;
-    altImg: string;
+    image: ImageMetadata;
+    altImage: string;
     desc: string;
-    github1: string;
-    github2: string;
-    imgGit: string;
-    altImgGit: string;
-    tech1: string;
-    tech2: string;
-    tech3: string;
+    githubBackend: string;
+    githubFrontend?: string; 
+    gitIcon: ImageMetadata; 
+    techStack: ImageMetadata[]; 
 }
 
 const {
     title,
-    img,
-    altImg,
+    image,
+    altImage,
     desc,
-    github1,
-    github2,
-    imgGit,
-    altImgGit,
-    tech1,
-    tech2,
-    tech3,
+    githubBackend,
+    githubFrontend,
+    gitIcon,
+    techStack,
 } = Astro.props;
 ---
 
@@ -36,11 +33,12 @@ const {
     >
     </div>
 
-    <!-- Imagen del proyecto con overlay -->
     <div class="relative overflow-hidden h-64 sm:h-80">
-        <img
-            src={img}
-            alt={altImg}
+        <Image
+            src={image}
+            alt={altImage}
+            width={800}
+            height={450}
             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
         />
         <div
@@ -48,7 +46,6 @@ const {
         >
         </div>
 
-        <!-- Título flotante sobre la imagen -->
         <div class="absolute bottom-0 left-0 right-0 p-6">
             <h3
                 class="font-lexend font-bold text-3xl text-white drop-shadow-lg"
@@ -58,7 +55,6 @@ const {
         </div>
     </div>
 
-    <!-- Contenido -->
     <div class="relative p-6 sm:p-8">
         <p
             class="font-lexend text-gray-700 text-base sm:text-lg leading-relaxed mb-6"
@@ -66,51 +62,60 @@ const {
             {desc}
         </p>
 
-        <!-- Tecnologías -->
         <div class="flex gap-4 mb-6 items-center">
             <span class="font-lexend font-semibold text-mint-700"
                 >Tech Stack:</span
             >
             <div class="flex gap-3">
-                <img
-                    src={tech1}
-                    alt="Tech 1"
-                    class="w-8 h-8 object-contain hover:scale-125 transition-transform"
-                />
-                <img
-                    src={tech2}
-                    alt="Tech 2"
-                    class="w-8 h-8 object-contain hover:scale-125 transition-transform"
-                />
-                <img
-                    src={tech3}
-                    alt="Tech 3"
-                    class="w-8 h-8 object-contain hover:scale-125 transition-transform"
-                />
+                {
+                    techStack.map((tech, index) => (
+                        <Image
+                            src={tech}
+                            alt={`Tech icon ${index + 1}`}
+                            width={32}
+                            height={32}
+                            class="w-8 h-8 object-contain hover:scale-125 transition-transform"
+                        />
+                    ))
+                }
             </div>
         </div>
 
-        <!-- Botones de GitHub -->
         <div class="flex flex-col sm:flex-row gap-4">
             <a
-                href={github1}
+                href={githubBackend}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-mint-500 to-teal-500 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-mint-500/50 transition-all duration-300"
+                class="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-mint-600 to-teal-600 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-300"
             >
-                <img src={imgGit} alt={altImgGit} class="w-5 h-5 invert" />
+                <Image
+                    src={gitIcon}
+                    alt="GitHub icon"
+                    width={20}
+                    height={20}
+                    class="invert"
+                />
                 <span>Backend</span>
             </a>
 
-            <a
-                href={github2}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center justify-center gap-3 px-6 py-3 border-2 border-mint-500 text-mint-700 font-lexend font-semibold rounded-xl hover:bg-mint-500 hover:text-white transition-all duration-300"
-            >
-                <img src={imgGit} alt={altImgGit} class="w-5 h-5" />
-                <span>Frontend</span>
-            </a>
+            {
+                githubFrontend && (
+                    <a
+                        href={githubFrontend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center justify-center gap-3 px-6 py-3 border-2 border-mint-500 text-mint-700 font-lexend font-semibold rounded-xl hover:bg-mint-500 hover:text-white transition-all duration-300"
+                    >
+                        <Image
+                            src={gitIcon}
+                            alt="GitHub icon"
+                            width={20}
+                            height={20}
+                        />
+                        <span>Frontend</span>
+                    </a>
+                )
+            }
         </div>
     </div>
 </section>

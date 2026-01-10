@@ -1,5 +1,33 @@
 ---
 import EnhancedContact from "./EnhancedContact.astro";
+
+import linkedin from "../assets/images/linkedin.png";
+import github from "../assets/images/github.png";
+import tiktok from "../assets/images/tiktok.png";
+import facebook from "../assets/images/facebook.png";
+
+const socialMedia = [
+    {
+        link: "https://www.linkedin.com/in/miguel-olarte-dev/",
+        img: linkedin,
+        altImg: "Linkedin de Miguel Olarte",
+    },
+    {
+        link: "https://github.com/olarte91",
+        img: github,
+        altImg: "Linkedin de Miguel Olarte",
+    },
+    {
+        link: "https://www.tiktok.com/@tktkr91",
+        img: tiktok,
+        altImg: "Tiktok de Miguel Olarte",
+    },
+    {
+        link: "https://www.facebook.com/profile.php?id=61572989186098",
+        img: facebook,
+        altImg: "Facebook de Miguel Olarte",
+    },
+];
 ---
 
 <section
@@ -20,25 +48,12 @@ import EnhancedContact from "./EnhancedContact.astro";
     </p>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 px-5">
-        <EnhancedContact
-            link="https://www.linkedin.com/in/miguel-olarte-dev/"
-            img="/linkedin.png"
-            altImg="LinkedIn - Miguel Olarte"
-        />
-        <EnhancedContact
-            link="https://github.com/olarte91"
-            img="/github.png"
-            altImg="GitHub - Miguel Olarte"
-        />
-        <EnhancedContact
-            link="https://www.tiktok.com/@tktkr91"
-            img="/tiktok.png"
-            altImg="TikTok - Miguel Olarte"
-        />
-        <EnhancedContact
-            link="https://www.facebook.com/profile.php?id=61572989186098"
-            img="/facebook.png"
-            altImg="Facebook - Miguel Olarte"
-        />
+        { socialMedia.map((social) => (
+            <EnhancedContact 
+            link={social.link}
+            imageSrc={social.img}
+            altImg={social.altImg}/>
+        ))
+        }
     </div>
 </section>

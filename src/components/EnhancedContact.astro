@@ -1,11 +1,13 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
     link: string;
-    img: string;
+    imageSrc: ImageMetadata;
     altImg: string;
 }
 
-const { link, img, altImg } = Astro.props;
+const { link, imageSrc, altImg } = Astro.props;
 ---
 
 <a
@@ -19,9 +21,12 @@ const { link, img, altImg } = Astro.props;
             class="absolute inset-0 bg-gradient-to-r from-mint-400 to-teal-500 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"
         >
         </div>
-        <img
-            src={img}
+        <Image
+            src={imageSrc}
             alt={altImg}
+            width={64}
+            height={64}
+            loading="lazy"
             class="relative w-12 h-12 sm:w-16 sm:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
         />
     </div>

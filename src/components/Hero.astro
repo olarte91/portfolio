@@ -4,24 +4,7 @@ import { Image } from "astro:assets";
 import miguel from "../assets/images/miguel.jpg";
 ---
 
-<section class="relative overflow-hidden min-h-screen">
-    <!-- Fondo animado con gradiente -->
-    <div
-        class="absolute inset-0 bg-gradient-to-br from-mint-400/20 via-emerald-300/10 to-teal-400/20 bg-300% animate-gradient-slow"
-    >
-    </div>
-
-    <!-- Círculos decorativos flotantes -->
-    <div
-        class="absolute top-20 left-10 w-72 h-72 bg-mint-300/30 rounded-full blur-3xl animate-float"
-    >
-    </div>
-    <div
-        class="absolute bottom-20 right-10 w-96 h-96 bg-teal-300/20 rounded-full blur-3xl animate-float"
-        style="animation-delay: 2s;"
-    >
-    </div>
-
+<section class="relative overflow-hidden min-h-screen bg-black">
     <div
         class="relative flex flex-col sm:flex-row w-full min-h-screen justify-center items-center gap-12 px-5 py-20"
     >
@@ -29,14 +12,24 @@ import miguel from "../assets/images/miguel.jpg";
         <div
             class="w-full flex flex-col justify-center items-center z-10 space-y-6"
         >
-            <h1
-                class="font-lexend font-extrabold text-6xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 mb-2 animate-fade-in text-center"
-            >
-                Miguel Olarte
-            </h1>
+            <div class="relative inline-block">
+                <span
+                    class="absolute inset-0 z-0 select-none font-lexend font-extrabold text-8xl sm:text-9xl text-center
+               text-mint-600 [-webkit-text-stroke:15px_#059669] opacity-70 blur-[8px] animate-fade-in [animation-delay:0.9s] [animation-fill-mode:both]"
+                >
+                    Miguel Olarte
+                </span>
+
+                <h1
+                    class="relative z-10 font-lexend font-extrabold text-8xl text-center sm:text-9xl
+             text-white [-webkit-text-stroke:1px_white] animate-fade-in [animation-delay:0.3s] [animation-fill-mode:both]"
+                >
+                    Miguel Olarte
+                </h1>
+            </div>
 
             <p
-                class="font-lexend font-light text-2xl sm:text-3xl text-gray-700 animate-fade-in-delay text-center"
+                class="font-lexend font-light text-2xl sm:text-3xl text-white animate-fade-in-delay text-center"
             >
                 Desarrollador Backend Junior | Java
             </p>
@@ -45,20 +38,20 @@ import miguel from "../assets/images/miguel.jpg";
             <div class="flex flex-col sm:flex-row gap-4 mt-8 animate-slide-up">
                 <a
                     href="#proyectos"
-                    class="px-8 py-4 bg-gradient-to-r from-mint-500 to-teal-500 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-xl hover:shadow-mint-500/50 transition-all duration-300 text-center"
+                    class="px-8 py-4 bg-gradient-to-b from-mint-500 to-teal-800 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:animate-pulse hover:shadow-mint-500/50 transition-all duration-300 text-center"
                 >
-                    Ver Proyectos
+                    Proyectos
                 </a>
                 <a
                     href="#contacto"
-                    class="px-8 py-4 border-2 border-mint-500 text-mint-700 font-lexend font-semibold rounded-xl hover:bg-mint-500 hover:text-white transition-all duration-300 text-center"
+                    class="px-8 py-4 border-2 border-mint-500 text-mint-300 font-lexend font-semibold rounded-xl hover:bg-mint-500 hover:text-white transition-all duration-300 text-center"
                 >
                     Contacto
                 </a>
                 <a
                     href="/documentos/Miguel_Olarte_CV.pdf"
                     download="CV-Miguel-Olarte-Backend-Developer.pdf"
-                    class="group px-8 py-4 bg-gradient-to-r from-mint-600 to-teal-600 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-mint-500/50 transition-all duration-300 text-center flex items-center gap-3"
+                    class="group px-8 py-4 bg-gradient-to-b from-mint-600 to-teal-800 text-white font-lexend font-semibold rounded-xl hover:scale-105 hover:animate-pulse hover:shadow-mint-500/50 transition-all duration-300 text-center flex items-center gap-3"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +77,7 @@ import miguel from "../assets/images/miguel.jpg";
             <div class="relative group">
                 <!-- Efecto de halo animado -->
                 <div
-                    class="absolute -inset-1 bg-gradient-to-r from-mint-400 to-teal-500 rounded-full blur-xl opacity-40 group-hover:opacity-75 transition duration-500 animate-pulse"
+                    class="absolute -inset-1 bg-gradient-to-r from-mint-400 to-teal-500 rounded-full blur-lg opacity-80 group-hover:opacity-90 transition duration-400 animate-pulse"
                 >
                 </div>
 
@@ -93,11 +86,9 @@ import miguel from "../assets/images/miguel.jpg";
                     alt="Miguel Olarte - Desarrollador Backend Java"
                     width={500}
                     height={500}
-                    class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-500 reveal"
+                    class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full object-top object-cover border-4 border-mint-600 shadow-2xl reveal"
                 />
             </div>
         </div>
     </div>
 </section>
-
-

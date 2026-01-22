@@ -12,12 +12,12 @@ const projectsData = await getCollection("projects");
     id="proyectos"
 >
     <h2
-        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16"
+        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16 reveal"
     >
         Proyectos
     </h2>
 
-    <div class="max-w-6xl mx-auto space-y-12">
+    <div class="max-w-6xl mx-auto space-y-12 reveal">
         {
             projectsData.map((project) => (
                 <EnhancedProjectCard

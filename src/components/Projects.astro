@@ -7,15 +7,22 @@ import githubIcon from "../assets/images/github.png";
 const projectsData = await getCollection("projects");
 ---
 
-<section
-    class="w-full h-auto py-20 px-5 bg-gradient-to-b from-white to-mint-50"
-    id="proyectos"
->
-    <h2
-        class="font-extrabold font-lexend text-5xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-mint-600 to-teal-600 text-center mb-16 reveal"
-    >
-        Proyectos
-    </h2>
+<section class="w-full h-auto py-20 px-5 bg-black" id="proyectos">
+    <div class="relative inline-block w-full pb-12">
+        <span
+            class="absolute inset-0 z-0 select-none font-lexend font-extrabold text-7xl sm:text-6xl text-center
+               text-mint-600 [-webkit-text-stroke:15px_#059669] opacity-70 blur-[8px] reveal"
+        >
+            Proyectos
+        </span>
+
+        <h2
+            class="relative z-10 font-lexend font-extrabold text-7xl text-center sm:text-6xl
+             text-white [-webkit-text-stroke:1px_white] reveal"
+        >
+            Proyectos
+        </h2>
+    </div>
 
     <div class="max-w-6xl mx-auto space-y-12 reveal">
         {
